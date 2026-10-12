@@ -1,0 +1,163 @@
+@import '@fontsource/anton/400.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/600.css';
+@import '@fontsource/space-grotesk/700.css';
+@import '@tabler/icons-webfont/dist/tabler-icons.min.css';
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'tabler-icons-filled';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('@tabler/icons-webfont/dist/fonts/tabler-icons-filled.woff2') format('woff2');
+}
+
+.icon-filled {
+  font-family: 'tabler-icons-filled' !important;
+}
+
+.icon-filled.ti-star::before {
+  content: '\f6a6';
+}
+
+@theme {
+  --color-ink: #080808;
+  --color-paper: #ffffff;
+  --color-gold: #d4af37;
+  --color-muted: #665f52;
+  --color-jotform-surface: #f3f3fe;
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+}
+
+@utility hardshadow {
+  box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+@utility hardshadowsm {
+  box-shadow: 4px 4px 0 var(--color-ink);
+}
+
+@utility brutalborder {
+  border: 3px solid var(--color-ink);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .site-stripes {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(8, 8, 8, 0.06) 0,
+      rgba(8, 8, 8, 0.06) 2px,
+      transparent 2px,
+      transparent 9px
+    );
+  }
+
+  .barcode {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--color-ink) 0,
+      var(--color-ink) 2px,
+      transparent 2px,
+      transparent 7px,
+      var(--color-ink) 7px,
+      var(--color-ink) 11px,
+      transparent 11px,
+      transparent 14px
+    );
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 26s linear infinite;
+  }
+
+  .marquee-track-reverse {
+    animation-direction: reverse;
+  }
+
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px currentColor;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
