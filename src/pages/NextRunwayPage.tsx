@@ -24,7 +24,7 @@ export default function NextRunwayPage() {
         </PageSection>
       </section>
       <PageSection className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-        <div><p className="font-bold text-xs uppercase tracking-[0.22em] text-(--color-muted)">For guardians</p><h2 className="mt-3 font-display text-5xl uppercase leading-none sm:text-7xl">Ready to walk?</h2><p className="mt-4 max-w-xl text-lg leading-relaxed text-(--color-muted)">Registration is completed by a parent or legal guardian. The next date is currently being confirmed.</p></div>
+        <div><p className="font-bold text-xs uppercase tracking-[0.22em] text-(--color-muted)">For guardians</p><h2 className="mt-3 font-display text-5xl uppercase leading-none sm:text-7xl">Ready to walk?</h2><p className="mt-4 max-w-xl text-lg leading-relaxed text-(--color-muted)">Registration is completed by a parent or legal guardian. The runway is scheduled for 1st Nov, 2026.</p></div>
         <ActionLink to="/apply" className="text-2xl">Start application <Icon name="arrow-right" /></ActionLink>
       </PageSection>
       <p className="sr-only">Current event details: {runwayEvent.city}, {runwayEvent.venue}</p>

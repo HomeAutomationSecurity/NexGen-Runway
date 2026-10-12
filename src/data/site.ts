@@ -50,7 +50,7 @@ export const navItems: NavItem[] = [
 
 export const runwayEvent: RunwayEvent = {
   name: 'NexGen Runway 2.0',
-  dateLabel: 'TBC',
+  dateLabel: '1st Nov, 2026',
   city: 'Melbourne',
   venue: 'Bells Hotel, South Melbourne',
   ageRange: 'Open to all',

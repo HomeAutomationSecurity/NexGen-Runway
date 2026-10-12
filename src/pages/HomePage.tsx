@@ -39,7 +39,7 @@ export default function HomePage() {
       </section>
       <PageSection className="pb-12 lg:pb-16">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-          <SectionHeading eyebrow="Next runway" title="Your next big walk starts here." copy="NexGen Runway 2.0 is coming to Melbourne at Bells Hotel, South Melbourne. The event date is TBC, so register your interest for the official event pack." />
+          <SectionHeading eyebrow="Next runway" title="Your next big walk starts here." copy="NexGen Runway 2.0 is coming to Melbourne at Bells Hotel, South Melbourne on 1st Nov, 2026. Register your interest for the official event pack." />
           <div className="lg:justify-self-end"><ActionLink to="/next-runway">View runway details <Icon name="arrow-right" /></ActionLink></div>
         </div>
       </PageSection>
